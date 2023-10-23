@@ -48,3 +48,12 @@ Feel free to use this repository as a template for your one, or fork from this: 
 | 98     	| 98      |
 | 99     	| Fizz    |
 | 100    	| Buzz    |
+
+# Setup
+
+The only requirements on your computer are: 
+- [Make](https://www.gnu.org/software/make/)
+- [Docker](https://www.docker.com/)
+
+Then, clone it and install dependencies running the command `make install` from your terminal, in the root folder of the project.
+After dependencies are installed, you can run tests via `make test`.
