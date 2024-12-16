@@ -1,11 +1,12 @@
 class Song99Bottles {
-    handle(startNumber: number,length: number): string[] {
+    song(startNumber: number,length: number): string[] {
 
-        const array_result = [];
+        const array_result: string[] = [];
         for(let i=0; i< length; i++){
             const bottles= startNumber - i;
             const bottles_next = bottles - 1;
-           array_result.push(`${bottles} bottles of beer on the wall, ${bottles} bottles of beer. Take one down and pass it around, ${bottles_next} bottles of beer on the wall.`);
+            if(bottles >= 2 )
+                array_result.push(`${bottles} bottles of beer on the wall, ${bottles} ${bottles >= 2 ? 'bottles' : 'bottle'} of beer. Take one down and pass it around, ${bottles_next} ${bottles_next >= 2 ? 'bottles' : 'bottle'} of beer on the wall.`);
         }
 
         return array_result;
