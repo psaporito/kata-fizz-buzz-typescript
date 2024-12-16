@@ -24,6 +24,15 @@ describe('fizzBuzz', function (): void {
 
     var result3: string = FizzBuzzClass.handle(18);
     expect(result3).toBe('Fizz');
+
+    var result3: string = FizzBuzzClass.handle(5);
+    expect(result3).toBe('Buzz');
+
+    var result3: string = FizzBuzzClass.handle(10);
+    expect(result3).toBe('Buzz');
+    
+    var result3: string = FizzBuzzClass.handle(20);
+    expect(result3).toBe('Buzz');
   });
 
 });

@@ -10,9 +10,13 @@ class FizzBuzz {
     handle(value:number): string {
         if(value % 3 === 0) {
             return 'Fizz';
-        } else{
-            return String(value);
-        }
+        } 
+        
+        if(value % 5 === 0) {
+            return 'Buzz';
+        } 
+        
+        return String(value);        
     }
 }
 
