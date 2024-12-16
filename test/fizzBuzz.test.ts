@@ -12,7 +12,7 @@ describe('fizzBuzz', function (): void {
    *  99 => return Fizz
    *  100 => return Buzz
    */
-  it('fizz', (): void => {
+  it('Fizz', (): void => {
     var result: string = FizzBuzzClass.handle(3);
     expect(result).toBe('Fizz');
 
@@ -24,15 +24,28 @@ describe('fizzBuzz', function (): void {
 
     var result3: string = FizzBuzzClass.handle(18);
     expect(result3).toBe('Fizz');
+  });
 
+  it('Buzz', (): void => {
     var result3: string = FizzBuzzClass.handle(5);
     expect(result3).toBe('Buzz');
 
     var result3: string = FizzBuzzClass.handle(10);
     expect(result3).toBe('Buzz');
-    
+
     var result3: string = FizzBuzzClass.handle(20);
     expect(result3).toBe('Buzz');
-  });
+  })
+
+  it('FizzBuzz',(): void => {
+    var result3: string = FizzBuzzClass.handle(15);
+    expect(result3).toBe('FizzBuzz');
+
+    var result3: string = FizzBuzzClass.handle(30);
+    expect(result3).toBe('FizzBuzz');
+
+    var result3: string = FizzBuzzClass.handle(45);
+    expect(result3).toBe('FizzBuzz');
+  })
 
 });

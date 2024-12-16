@@ -8,6 +8,10 @@ for all numbers that are multiples of both 3 and 5, print “FizzBuzz” instead
 class FizzBuzz {
 
     handle(value:number): string {
+        if(value % 3 === 0 && value % 5 === 0 ){
+            return 'FizzBuzz';
+        }
+
         if(value % 3 === 0) {
             return 'Fizz';
         } 
