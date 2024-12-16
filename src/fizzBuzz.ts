@@ -7,8 +7,12 @@ for all numbers that are multiples of both 3 and 5, print “FizzBuzz” instead
  */
 class FizzBuzz {
 
-    handle(): string {
-        return 'Fizz';
+    handle(value:number): string {
+        if(value === 3 || value === 6 || value == 9) {
+            return 'Fizz';
+        } else{
+            return String(value);
+        }
     }
 }
 

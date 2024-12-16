@@ -14,9 +14,14 @@ describe('fizzBuzz', function (): void {
    */
   it('fizz', (): void => {
 
-    var result: string = FizzBuzzClass.handle();
-
+    var result: string = FizzBuzzClass.handle(3);
     expect(result).toBe('Fizz');
+
+    var result2: string = FizzBuzzClass.handle(6);
+    expect(result2).toBe('Fizz');
+
+    var result3: string = FizzBuzzClass.handle(9);
+    expect(result3).toBe('Fizz');
   });
 
 });
