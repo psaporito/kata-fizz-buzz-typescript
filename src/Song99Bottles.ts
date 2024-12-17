@@ -1,15 +1,24 @@
 class Song99Bottles {
     song(startNumber: number, length: number): string[] {
 
-        const array_result: string[] = [];
-        for (let i = 0; i < length; i++) {
-            const bottles = startNumber -i;
-            const bottles_next = bottles - 1;
-            array_result.push(`${this.bottlesOnTheWall(bottles)}, ${this.bottlesOfBeer(bottles)}. ${this.toTheStore(bottles_next)}, ${this.bottlesOnTheWall(bottles_next)}.`);
-        }
+        // Old Code        
+        // for (let i = 0; i < length; i++) {
+        //     const bottles = startNumber -i;
+        //     const bottles_next = bottles - 1;
+        //     array_result.push(`${this.bottlesOnTheWall(bottles)}, ${this.bottlesOfBeer(bottles)}. ${this.toTheStore(bottles_next)}, ${this.bottlesOnTheWall(bottles_next)}.`);
+        // }
 
+        const array_result = this.writeRow(startNumber, [])
         return array_result;
     }
+
+    writeRow(beers: number, array_result: string[]): string[]{
+        array_result.push(`${this.bottlesOnTheWall(beers)}, ${this.bottlesOfBeer(beers)}. ${this.toTheStore(beers-1)}, ${this.bottlesOnTheWall(beers-1)}.`);
+        if( beers > 0)
+            return this.writeRow(beers-1, array_result)
+        return array_result
+    }
+
 
     bottlesOnTheWall(bottles: number) {
         return `${this.bottlesOfBeer(bottles)} on the wall`
